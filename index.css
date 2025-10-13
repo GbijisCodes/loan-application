@@ -204,14 +204,15 @@
  }
 
  .final{
-    width: 414px;
+    width: 390px;
     height: 264px;
     padding: 24px 32px;
     background: #FFFCFC;
     box-shadow: 0px -4px 10px 0px #33333314;
-    margin: 32px auto;
+    margin: 32px auto 0 auto;
 
-
+    
+    
 
  }
 
@@ -244,7 +245,7 @@
  }
 
  .applyloan{
-  width: 350px;
+  width: 318px;
   height: 48px;
   border-radius: 8px;
   padding: 10px;
