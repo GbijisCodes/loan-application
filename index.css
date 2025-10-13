@@ -1,0 +1,334 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body{
+    background-color: #EFF1F5;
+  }
+  @font-face {
+    font-family: Poppins;
+    src: url(./Poppins/Poppins-Regular.ttf);
+  }
+  @font-face {
+    font-family:Poppinsb ;
+    src: url(./Poppins/Poppins-Bold.ttf);
+  }
+  @font-face {
+    font-family: Poppinssb;
+    src: url(./Poppins/Poppins-SemiBold.ttf);
+  }
+
+
+  @font-face {
+    font-family: Poppinsm;
+    src: url(./Poppins/Poppins-Medium.ttf);
+  }
+
+  .loan {
+    width: 364px;
+    height: 27px;
+    opacity: 1;
+    margin: 32px auto;          /* centers horizontally */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;        /* vertically centers content inside */
+  }
+  
+.loantext{
+    font-family: Poppins;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+    
+}
+
+.options{
+    width: 24;
+    height: 24;
+    flex-direction: column;
+    display: flex;
+
+}
+
+.maxfund{
+    background: #FFFFFF;
+    width: 350px;
+    height: 171px;
+    border-radius: 8px;
+    opacity: 1;
+    margin: 32px auto;
+    border-width: 1px;
+    padding: 14px 16px;
+    border: 1px solid #29BBCF;
+    position: relative;
+    
+}
+.maximumfund{
+    font-family: Poppinsm;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.fund{
+    font-family: Poppinssb;
+    font-weight: 600;
+    font-size: 32px;
+    margin-top: 8px;
+    align-items: center;
+   
+
+}
+.figures1 {
+    display: flex;
+    flex-direction: column;      /* stack text vertically */
+    text-align: center;          /* center text lines */
+  }
+  
+  .maxfund hr {
+    width: 318px;
+    border: 0.5px solid #9BA1AA;
+    margin: 10px auto; /* centers it horizontally */
+    border-radius:1px ;
+    opacity: 0.5;
+   
+  }
+  
+  .carname{
+    font-family: Poppinsm;
+    font-weight: 500;
+    font-size: 14px;
+
+  }
+
+  .caryear{
+    font-family: Poppinsm;
+    font-weight: 500;
+    font-size: 12px;
+    color: #9299B5;
+
+
+
+  }
+
+  .optionsslider{
+    margin-top: 6px;
+    height: 20px;
+    width: 20px;
+  }
+
+  .loanpurpose{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .maxfund2{
+
+    background: #FFFFFF;
+    width: 350px;
+    height: 139px;
+    border-radius: 8px;
+    margin: 32px auto;
+    border-width: 1px;
+    padding: 14px 16px;
+    /* border: 1px solid #29BBCF */
+  }
+  .loanamount{
+    font-family: Poppinsm;
+    font-weight: 500;
+    font-size: 12px;
+
+  }
+
+  .loanamountfigure{
+    padding-top: 10px;
+    font-family: Poppinssb;
+    font-weight: 600;
+    font-size: 18px;
+    padding-bottom: 15px;
+
+
+  }
+  .loanperiodfigure{
+    padding-top: 10px;
+    font-family: Poppinssb;
+    font-weight: 600;
+    font-size: 18px;
+    padding-bottom: 15px;
+
+
+  }
+
+ /* .slider{
+    width: 318px;
+    height: 6px;
+    border-radius: 16px;
+    background: #E5E7EC;
+
+    
+
+ } */
+
+ .innerslider{
+    width: 211px;
+    height: 6px;
+    border-radius: 16px;
+    background: #29BBCF;
+
+    
+    
+
+ }
+
+
+ .infobelow{
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 12px;
+    color: #9299B5;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+
+
+ }
+
+ .final{
+    width: 414px;
+    height: 264px;
+    padding: 24px 32px;
+    background: #FFFCFC;
+    box-shadow: 0px -4px 10px 0px #33333314;
+    margin: 32px auto;
+
+
+
+ }
+
+ .estimated{
+    font-family: Poppinsm;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+ }
+
+ .moneyvalue{
+    font-family: Poppinssb;
+    font-weight: 600;
+    font-size: 32px;
+    margin-top: 8px;
+    align-items: center;
+   
+
+
+ }
+
+ .installmentfee{
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 12px;
+  color: #555555;
+  
+
+
+ }
+
+ .applyloan{
+  width: 350px;
+  height: 48px;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 32px;
+  background-color: #29BBCF;
+  color: white;
+  border: none;
+
+ }
+
+
+/* Car List Dropdown */
+.hidden {
+  display: none;
+}
+
+
+.carlist {
+    position: absolute;
+    top: 100%;         /* positions the dropdown directly below the trigger */
+    left: 0;
+    width: 100%;       /* make it the same width as the container */
+    z-index: 10;       /* ensures it appears above other elements */
+    margin-top: 4px;   /* small gap */
+    border: 1px solid #29BBCF;
+    border-radius: 6px;
+    padding: 8px;
+    background: #F8F9FB;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* nice floating look */
+  }
+  
+
+
+.caritem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: Poppinsm;
+  font-size: 13px;
+}
+
+.caritem:hover {
+  background-color: #E8F8FA;
+}
+
+.caritem.active {
+  background-color: #29BBCF;
+  color: white;
+}
+
+
+
+.loan-range {
+  width: 100%;
+  height: 6px;
+  border-radius: 5px;
+  appearance: none;
+  background: linear-gradient(to right, #29BBCF 0%, #E5E7EC 0%);
+  outline: none;
+  cursor: pointer;
+}
+
+/* Blue circular thumb */
+.loan-range::-webkit-slider-thumb {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #29BBCF;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.loan-range::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+/* Firefox support */
+.loan-range::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #29BBCF;
+  cursor: pointer;
+}
