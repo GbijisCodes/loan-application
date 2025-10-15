@@ -1,9 +1,9 @@
 const cars = [
-    { brand: "Toyota", model: "Corolla", year: 2018, maxFunding: 1000000, loanamount:1000000 },
-    { brand: "Honda", model: "Civic", year: 2019, maxFunding: 1750000, loanamount:1750000},
-    { brand: "Mazda", model: "CX-5", year: 2020, maxFunding: 2500000, loanamount:2500000 },
-    { brand: "BMW", model: "3 Series", year: 2021, maxFunding: 3250000 , loanamount:3250000},
-    { brand: "Toyota", model: "Prado", year: 2022, maxFunding: 4000000,loanamount:4000000 }
+    { brand: "Toyota", model: "Corolla", year: 2018, maxFunding: 1000000, loanamount:1000000, carinterest:25 },
+    { brand: "Honda", model: "Civic", year: 2019, maxFunding: 1750000, loanamount:1750000 , carinterest:30},
+    { brand: "Mazda", model: "CX-5", year: 2020, maxFunding: 2500000, loanamount:2500000, carinterest:20 },
+    { brand: "BMW", model: "3 Series", year: 2021, maxFunding: 3250000 , loanamount:3250000, carinterest:15},
+    { brand: "Toyota", model: "Prado", year: 2022, maxFunding: 4000000,loanamount:4000000, carinterest:10 }
   ];
   
   const toggleBtn = document.querySelector('.optionsslider img');
@@ -13,6 +13,7 @@ const cars = [
   const fundValue = document.querySelector('.fund');
   const loanamountfig = document.querySelector('.loanamountfigure');
   const upperboundvalue = document.querySelector('.values2');
+  const carinterestval = document.querySelector('.percent');
   
   const loanAmountSlider = document.getElementById('loanAmountSlider');
   const loanPeriodSlider = document.getElementById('loanPeriodSlider');
@@ -59,6 +60,7 @@ const cars = [
     carYear.textContent = selectedCar.year;
     fundValue.textContent = `₦${selectedCar.maxFunding.toLocaleString()}`;
     upperboundvalue.textContent = `₦${selectedCar.loanamount.toLocaleString()}`;
+    carinterestval.textContent = `${selectedCar.carinterest}`;
     
     updateSliderForCar();
   }
@@ -109,8 +111,13 @@ const cars = [
   function updateMonthlyInstallment() {
     const loanAmount = parseFloat(loanAmountSlider.value);
     const loanPeriod = parseFloat(loanPeriodSlider.value);
+    const interestRate = selectedCar.carinterest;
+
+    const totalWithInterest = loanAmount + (loanAmount * (interestRate / 100));
+
+
     
-    const monthly = loanAmount / loanPeriod;
+    const monthly = (totalWithInterest/ loanPeriod);
     monthlyInstallmentText.textContent = `₦${Math.round(monthly).toLocaleString()}`;
   }
   
